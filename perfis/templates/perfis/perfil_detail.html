@@ -1,0 +1,18 @@
+{% extends "perfis/base.html" %}
+
+{% block title %}{{ perfil.usuario }}{% endblock %}
+
+{% block content %}
+
+    <h2>{{ perfil.usuario }}</h2>
+        <p class="date"> 
+            
+            <img src=/media/media/media/{{perfil.image}} width="300"
+            height="300"/>
+     Publicado em {{ perfil.image }} por {{ perfil.usuario }} detalhes {{perfil.sobre}} 
+    </p>
+    {{ perfil.body|linebreaks }}
+    
+{% endblock %}
+
+#{{perfil.image.get_absolute_url}}

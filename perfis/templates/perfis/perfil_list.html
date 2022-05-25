@@ -1,0 +1,25 @@
+{% extends "perfis/base.html" %}
+
+{% block title %}usuarios ativos{% endblock %}
+
+{% block content %}
+    {% for perfil in perfil_list %}
+        <article>
+            <h2>
+                <a href="{{ perfil.get_absolute_url }}">
+                    {{ perfil.usuario}}
+                </a>
+            </h2>
+            <p class="date">
+                <img src=/media/media/media/{{perfil.image}} width="100"
+            height="100"/>
+                Publicado em {{ perfil.created }} por {{ perfil.usuario }}
+            </p>
+            {{ perfil.body|linebreaks|truncatewords:10 }}
+        </article>
+    {% endfor %}
+{% endblock %}
+
+
+
+    
