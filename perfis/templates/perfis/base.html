@@ -8,6 +8,19 @@
     <header>
         <h1>BEM VINDOS USUARIOS</h1>
     </header>
+    <br>consultacidade
+    <form action="" method="GET">
+        <input type="text", name="cidade", id="cidade", value="{{request.GET.cidade}}">
+        <input type="text", name="sexo", id="sexo", value="{{request.GET.sexo}}">
+        <input type="submit" class="btn btn-success">CONSULTAR</button> 
+    </form>
+</br>
+<br>consultasexo# a implantar BREVE!!!
+    <form action="" method="GET">
+        <input type="text", name="sexo", id="sexo", value="{{request.GET.sexo}}">
+        <input type="submit" class="btn btn-success">CONSULTAR</button> 
+    </form>
+</br>
     <main>
         {% block content %}
         {% endblock %}

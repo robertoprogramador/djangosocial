@@ -20,9 +20,10 @@ class Perfil(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated= models.DateTimeField(auto_now=True)
     image = models.ImageField(upload_to='media')#, blank=True
-#image = models.ImageField(upload_to='media')
+    list_filter=['sexo']
+    search_fields=['cidade']
     objects = models.Manager()
-
+    
     def __str__(self):
         return self.usuario 
 
@@ -31,3 +32,6 @@ class Perfil(models.Model):
 
     class Meta:
         ordering = ("-created",)
+
+#list_filter=['sexo']
+#search_fields=['cidade']
